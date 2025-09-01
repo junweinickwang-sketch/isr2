@@ -194,7 +194,6 @@ def build_prompt(query, ranked_pages):
         "Assume that you are the Google AI Overview generator, which is a feature integrated into Google Search that provides AI-generated summaries of search results. "
         "Please answer the following query in one paragraph based on the HTMLs provided. For each factual sentence, append inline citation(s)\n"
         "like [1] or [2][5]. Avoid markdown headings, bullet lists, disclaimers.\n"
-        "End with the overview only.\n"
     )
 
     # We keep QUERY and SOURCES sections, but the instruction text is exactly as above.
