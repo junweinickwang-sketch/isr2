@@ -442,7 +442,7 @@ def admin_logs_clear():
 # ------------------------------
 @app.route("/submit", methods=["POST"])
 def submit():
-    text = request.form.get("text","").strip()
+    text = (request.form.get("conclusion") or request.form.get("text","")).strip()
     q = request.form.get("q","").strip()
     record_submission(q, text)
     record_event("submit", q, f"{len(text.split())} words")
