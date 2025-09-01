@@ -218,7 +218,7 @@ def generate_overview(query, pages, max_sources=8):
 
     if _GENAI_READY:
         try:
-            model = genai.GenerativeModel("gemini-1.5-flash")
+            model = genai.GenerativeModel("gemini-2.5-flash")
             resp = model.generate_content(prompt)
             text = (resp.text or "").strip()
             # Ensure it's a single paragraph string
